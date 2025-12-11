@@ -75,8 +75,8 @@ _dbConnection.Insert(director);
 Replace the return statement with:
 
 ```csharp
-return _dbConnection.Table<DirectorModel>().ToList();
-```
+```return _dbConnection.Table<DirectorModel>().ToList();
+
 
 #### Step 3d: Implement GetDirectorById()
 

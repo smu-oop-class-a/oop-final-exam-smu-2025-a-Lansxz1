@@ -47,10 +47,19 @@ namespace OOP.FinalTerm.Exam
         {
             try
             {
+                var directors = _directorRepository.GetAllDirectors();
+                dgvDirectors.DataSource = directors;
+
+                // Hide the ID column (optional but recommended)
+                if (dgvDirectors.Columns.Contains("Id"))
+                {
+                    dgvDirectors.Columns["Id"].Visible = false;
+                }
+
                 //TODO: Students will implement this method to load directors into dgvDirectors using _directorRepository.GetAllDirectors()
                 //refer to LoadMoviesToGrid() method for guidance
                 //hide director id
-               //dgvDirectors.DataSource = 
+                //dgvDirectors.DataSource = 
 
             }
             catch (Exception ex)
